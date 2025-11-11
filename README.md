@@ -4,9 +4,7 @@ A minimal custom terminal application written in C++.
 
 My_term provides source code and a Makefile to compile and run a small terminal-like application. This README explains how to build, run, and optionally install a desktop entry for the app.
 
-Badges (optional)
-- Build: ![build status](#)
-- License: ![license](#)
+
 
 ---
 
