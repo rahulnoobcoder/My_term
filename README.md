@@ -93,13 +93,3 @@ Contributions are welcome. If you'd like help:
 - Submit a PR with a clear description of changes and how to build/test them.
 
 ---
-
-## License
-Add your license here (e.g., MIT). Example:
-
-MIT License
-See LICENSE file for details.
-
----
-
-This commit updates the README.md to a clearer, formatted version.
