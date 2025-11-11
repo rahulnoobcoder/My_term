@@ -1,137 +1,63 @@
-# My_term
+My_term - A C++ Terminal Application
+My_term is a custom terminal application built in C++. This project provides the necessary code and build instructions to compile and run the terminal, as well as optional steps to integrate it as a desktop application on Linux.
 
-A lightweight C++ terminal project. This README provides a clear overview, build and usage instructions, and contribution guidelines. Replace placeholders (marked with <...>) with project-specific details if needed.
+COMPILATION INSTRUCTIONS
 
----
+Make sure all dependencies listed in section 3 are installed.
 
-## Table of Contents
-- About
-- Features
-- Requirements
-- Build / Install
-- Usage
-- Common Make targets
-- Contributing
-- Reporting issues
-- License
-- Maintainer
+Compile and run using the provided Makefile:
 
----
+make run
+EXECUTION INSTRUCTIONS
 
-## About
-My_term is a C++ project that provides <short description of what the project does — e.g., a custom terminal emulator / terminal utilities / REPL>. It is implemented in modern C++ and built using a Makefile.
+Run the program directly from your directory using:
 
-Replace this paragraph with a short, 1–2 sentence description of the project's purpose and core value.
+make run
+Optional: Create a Desktop Application
 
----
+Edit line 8 of bat_term.desktop with the full path to the run_app.sh script on your system.
 
-## Features
-- Feature 1 — <brief>
-- Feature 2 — <brief>
-- Feature 3 — <brief>
+(Optional) Edit line 11 if you want to set a custom logo for the application.
 
-(Adjust or remove features as appropriate.)
+Run the following commands in your directory to install the desktop entry:
 
----
+chmod +x run_app.sh
+chmod +x bat_term.desktop
+cp bat_term.desktop ~/.local/share/applications/
+The application should now be visible in your system's application menu (e.g., Ubuntu apps).
 
-## Requirements
-- GNU Make
-- A C++17-compatible compiler (g++ 7+ or clang++ 7+)
-- POSIX-compatible system (Linux / macOS) — if the project uses OS-specific APIs, note that here
-- Any additional libraries (e.g., ncurses, readline) — list them if the project depends on them
+DEPENDENCIES
 
----
+Run the following commands to install the required packages on an Ubuntu-based system:
 
-## Build / Install
+sudo apt update
+sudo apt install build-essential pkg-config libx11-dev
+sudo apt install libxft-dev libxrender-dev libxext-dev
+sudo apt install libcairo2-dev libpango1.0-dev
+PLATFORM INFORMATION
 
-Clone the repository and build with Make:
+Tested On:
 
-1. Clone:
-   git clone https://github.com/rahulnoobcoder/My_term.git
-   cd My_term
+Linux (Ubuntu-based distributions)
 
-2. Build:
-   make
+Compiler/Build:
 
-3. Run:
-   ./my_term
-   (Replace ./my_term with the actual produced executable name if different.)
+g++ (via build-essential)
 
-If Makefile defines different targets or expects environment variables, update these steps to match.
+make
 
----
+C++ Standard:
 
-## Usage
+(Please add your C++ standard, e.g., C++17)
 
-Basic usage examples:
+HOW TO TEST
 
-- Run interactively:
-  ./my_term
+Install all dependencies listed in section 3.
 
-- Run with arguments:
-  ./my_term <arg1> <arg2>
+Run make run in the project directory.
 
-- Example session:
-  1. Start: ./my_term
-  2. Do X: <example command>
-  3. Exit: <exit command or Ctrl-D>
+The terminal application should compile and launch.
 
-Add concrete examples and command-line flags/options here once known.
+If you followed the optional desktop application steps, find and launch "bat_term" from your system's application menu.
 
----
-
-## Common Make targets
-
-- make — build the default target (executable)
-- make clean — remove build artifacts
-- make run — build (if needed) then run the program (if defined)
-- make test — run tests (if a test target exists)
-
-Check the Makefile for exact targets and behavior.
-
----
-
-## Contributing
-
-Contributions are welcome. Suggested workflow:
-
-1. Fork the repository.
-2. Create a feature branch: git checkout -b feat/your-change
-3. Make changes and add tests where applicable.
-4. Commit and push your branch.
-5. Open a pull request describing the change.
-
-Please follow these guidelines:
-- Keep commits focused and atomic.
-- Write clear commit messages.
-- Add or update tests for new behavior.
-
----
-
-## Reporting issues
-
-If you find a bug or want a new feature, open an issue with:
-- A short, descriptive title
-- Steps to reproduce
-- Expected behavior vs actual behavior
-- Environment (OS, compiler, versions)
-
----
-
-## License
-
-Specify a license for this project by adding a LICENSE file. Common choices:
-- MIT
-- Apache-2.0
-- GPL-3.0
-
-If you want, tell me which license to add and I can create the LICENSE file and commit it.
-
----
-
-## Maintainer
-- rahulnoobcoder — https://github.com/rahulnoobcoder
-
----
-
-Generated and committed by GitHub Copilot Chat Assistant.
+CLEANUP (IF REQUIRED)
