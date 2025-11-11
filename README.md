@@ -1,63 +1,107 @@
-My_term - A C++ Terminal Application
-My_term is a custom terminal application built in C++. This project provides the necessary code and build instructions to compile and run the terminal, as well as optional steps to integrate it as a desktop application on Linux.
+# My_term
 
-COMPILATION INSTRUCTIONS
+A minimal custom terminal application written in C++.
 
-Make sure all dependencies listed in section 3 are installed.
+My_term provides source code and a Makefile to compile and run a small terminal-like application. This README explains how to build, run, and optionally install a desktop entry for the app.
 
-Compile and run using the provided Makefile:
+Badges (optional)
+- Build: ![build status](#)
+- License: ![license](#)
+
+---
+
+## Features
+- Lightweight terminal application written in C++
+- Simple build with a provided Makefile
+- Optional desktop integration (creates an application entry)
+
+---
+
+## Prerequisites / Dependencies (Ubuntu-based)
+Install required packages:
+
+sudo apt update
+sudo apt install build-essential pkg-config libx11-dev \    
+    libxft-dev libxrender-dev libxext-dev \    
+    libcairo2-dev libpango1.0-dev
+
+---
+
+## Build & Run
+From the project root:
 
 make run
-EXECUTION INSTRUCTIONS
 
-Run the program directly from your directory using:
+This will compile the project using the provided Makefile and run the application.
 
-make run
-Optional: Create a Desktop Application
+---
 
-Edit line 8 of bat_term.desktop with the full path to the run_app.sh script on your system.
+## Execution (manual)
+If you prefer to build then run manually:
 
-(Optional) Edit line 11 if you want to set a custom logo for the application.
+make
+./path/to/binary   # adjust to actual binary name/location produced by the Makefile
 
-Run the following commands in your directory to install the desktop entry:
+---
+
+## Optional: Create a Desktop Application Entry
+1. Edit bat_term.desktop:
+   - Change line 8 to the full path of run_app.sh on your system.
+   - (Optional) Edit line 11 to set a custom logo.
+
+2. Make scripts executable and install the desktop entry:
 
 chmod +x run_app.sh
 chmod +x bat_term.desktop
 cp bat_term.desktop ~/.local/share/applications/
-The application should now be visible in your system's application menu (e.g., Ubuntu apps).
 
-DEPENDENCIES
+After this, the application should appear in your desktop environment’s applications menu (e.g., Ubuntu apps).
 
-Run the following commands to install the required packages on an Ubuntu-based system:
+---
 
-sudo apt update
-sudo apt install build-essential pkg-config libx11-dev
-sudo apt install libxft-dev libxrender-dev libxext-dev
-sudo apt install libcairo2-dev libpango1.0-dev
-PLATFORM INFORMATION
+## Platform & Tooling
+- Tested on: Linux (Ubuntu-based distributions)
+- Compiler: g++ (provided by build-essential)
+- Build tool: make
+- Suggested C++ standard: C++17 (adjust if your code requires a different standard)
 
-Tested On:
+If your Makefile requires a specific C++ standard or flags, update the Makefile accordingly.
 
-Linux (Ubuntu-based distributions)
+---
 
-Compiler/Build:
+## How to Test
+1. Ensure dependencies are installed.
+2. Run:
 
-g++ (via build-essential)
+make run
 
-make
+3. The terminal application should compile and launch.
+4. If you installed the desktop entry, look for the application named bat_term (or the name in bat_term.desktop) in your system menu.
 
-C++ Standard:
+---
 
-(Please add your C++ standard, e.g., C++17)
+## Cleanup
+If the Makefile produces object files or a build directory, use:
 
-HOW TO TEST
+make clean
 
-Install all dependencies listed in section 3.
+(If make clean is not defined, delete build artifacts manually.)
 
-Run make run in the project directory.
+---
 
-The terminal application should compile and launch.
+## Contributing
+Contributions are welcome. If you'd like help:
+- Open an issue describing the feature or bug.
+- Submit a PR with a clear description of changes and how to build/test them.
 
-If you followed the optional desktop application steps, find and launch "bat_term" from your system's application menu.
+---
 
-CLEANUP (IF REQUIRED)
+## License
+Add your license here (e.g., MIT). Example:
+
+MIT License
+See LICENSE file for details.
+
+---
+
+This commit updates the README.md to a clearer, formatted version.
