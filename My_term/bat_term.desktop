@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=BAT Terminal_2
+Comment=A custom X11 terminal application
+
+# IMPORTANT: Use the absolute path to the script from Method 1
+Exec=/home/rahul/Desktop/25CS60R16project/My_term/run_app.sh
+
+# Optional: If you have an icon, provide the full path to it
+Icon=/home/rahul/Desktop/25CS60R16project/My_term/image.png
+
+# Your app creates its own window, so this should be false
+Terminal=false
+
+# Helps your desktop environment categorize the app
+Categories=System;TerminalEmulator;
